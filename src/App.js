@@ -3,7 +3,7 @@ import logo from './assets/logo.svg';
 import iconMenu from './assets/icon-menu.svg';
 import imagewebmobile from './assets/image-web-3-mobile.jpg';
 import NewsCard from './NewsBoxes/NewsCard';
-import newsData from './NewsBoxes/newsData';
+import newsData from './NewsBoxes/NewsData';
 import FooterData from './FooterBoxes/FooterData';
 import FooterCard from './FooterBoxes/FooterCard';
 
@@ -23,22 +23,33 @@ function App() {
         <i>
           <img src={iconMenu} width="40px" height="17px"></img>
         </i>
-      </header>
-      <container>
-        <img src={imagewebmobile} width="343px" height="300px"></img>
-        <div className="main-paragraph">
-          <h1>The Bright Future of Web 3.0?</h1>
-          <p>
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
-          </p>
-          <button>Read More</button>
+        <div className="navbarLinks">
+          <a href="">Home</a>
+          <a href="">New</a>
+          <a href="">Popular</a>
+          <a href="">Trending</a>
+          <a href="">Categories</a>
         </div>
-      </container>
-      <div className="news">
-        <h1>News</h1>
-        {NewsCards}
+      </header>
+      <div className="middlePart">
+        <div className="Container">
+          <img src={imagewebmobile} width="343px" height="300px"></img>
+          <div className="main-paragraph">
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div className="text-introductory">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div className="news">
+          <h1>News</h1>
+          {NewsCards}
+        </div>
       </div>
       <footer>{footerBoxes}</footer>
     </div>

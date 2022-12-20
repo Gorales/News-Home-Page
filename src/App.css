@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   padding: 28px 16px 80px;
   font-family: 'Inter', sans-serif;
 }
@@ -18,7 +18,11 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-   width: calc(100vw - 32px) /* 32px is sum of left and right padding of body */
+  width: calc(100vw - 32px) /* 32px is sum of left and right padding of body */
+}
+
+.navbarLinks {
+  display: none;
 }
 
 i {
@@ -27,10 +31,14 @@ i {
   align-items: center;
 }
 
-container {
+.Container {
   display: flex;
   flex-direction: column;
   margin-top: 32px;
+}
+
+.Container img {
+  align-self: center;
 }
 
 .main-paragraph {
@@ -106,11 +114,11 @@ container {
 }
 
 footer {
-  margin-top: 64px; /*gozden gecir */
+  margin-top: 64px;
 }
 
 .footerBox {
-  margin-top: 32px; /*gozden gecir */
+  margin-top: 32px;
   display: flex;
 }
 
@@ -142,17 +150,113 @@ footer {
 }
 
 
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media screen and (min-width:1440px) {
-  .App-link {
-    color: red;
+  body {
+    padding: 89px 165px 129px;
   }
-}  */
+
+  
+  header {
+    width: 100%;
+  }
+
+  header img {
+    width: 64.09px;
+    height: 39.9px;
+  }
+  
+  .App header i {
+    display: none;
+  }
+
+  .navbarLinks {
+    display: block;
+    align-self: center;
+  }
+
+  .navbarLinks a {
+    text-decoration: none;
+    margin-left: 40px;
+    color: #5E607A;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .middlePart {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Container {
+    width: 730px;
+    float: left;
+    margin-top: 55px;
+    height: 100%;
+  }
+
+  .Container img {
+    width: 730px; 
+    height: 300px;
+    object-fit:cover;
+  }
+
+  .news {
+    width: 350px;
+    height: 511px;
+    float: right;
+    margin-top: 55px;
+    padding: 32px 24px;
+  }
+
+  .main-paragraph {
+    display: flex;
+    margin-top: 28px;
+  }
+
+  .main-paragraph h1 {
+    font-size: 56px;
+    line-height: 56px;
+    margin-right: 30px;
+    width: 350px;
+  }
+
+  .text-introductory {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 100%;
+  }
+
+  .text-introductory p {
+    margin-top: 0;
+    line-height: 26px;
+    color: #5E607A;
+    text-align: left;
+  }
+
+  .text-introductory button {
+    letter-spacing: 4.375px;
+    margin-top: 29px;
+  }
+
+  footer {
+    display: flex;
+    margin-top: 71px;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .footerBox {
+    width: 350px;
+    height: 129px;
+}
+/*
+  .footerBox img {
+    
+  }
+
+  .footerBox-explanation{
+    
+  } */
+} 
