@@ -2,6 +2,7 @@ import './App.css';
 import logo from './assets/logo.svg';
 import iconMenu from './assets/icon-menu.svg';
 import imagewebmobile from './assets/image-web-3-mobile.jpg';
+import imagewebdesktop from './assets/desktopimage-web-3-desktop.jpg';
 import NewsCard from './NewsBoxes/NewsCard';
 import newsData from './NewsBoxes/NewsData';
 import FooterData from './FooterBoxes/FooterData';
@@ -33,7 +34,18 @@ function App() {
       </header>
       <div className="middlePart">
         <div className="Container">
-          <img src={imagewebmobile} width="343px" height="300px"></img>
+          <img
+            className="imgMobile"
+            src={imagewebmobile}
+            width="343px"
+            height="300px"
+          ></img>
+          <img
+            className="imgDesk"
+            src={imagewebdesktop}
+            width="343px"
+            height="300px"
+          ></img>
           <div className="main-paragraph">
             <h1>The Bright Future of Web 3.0?</h1>
             <div className="text-introductory">

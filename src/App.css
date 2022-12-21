@@ -43,8 +43,12 @@ i {
   margin-top: 32px;
 }
 
-.Container img {
+.Container .imgMobile {
   align-self: center;
+}
+
+.Container .imgDesk {
+  display: none;
 }
 
 .main-paragraph {
@@ -210,7 +214,12 @@ footer {
     height: 100%;
   }
 
-  .Container img {
+  .Container .imgMobile {
+    display: none;
+  }
+
+  .Container .imgDesk {
+    display: block;
     width: 730px; 
     height: 300px;
     object-fit:cover;
