@@ -22,17 +22,28 @@ function App() {
 
   function openScroll() {
     setSidebar(true);
-    document.getElementsByClassName('scrolled').classlist.add('toggle');
+    //document.getElementsByClassName('scrolled')[0].classList.add('toggle');
   }
 
   function closeScroll() {
     setSidebar(false);
-    document.getElementsByClassName('scrolled').classlist.remove('toggle');
+    //document.getElementsByClassName('scrolled')[0].classList.remove('toggle');
   }
 
   return (
     <div className="App">
-      <div className="scrolled" width="" height="">
+      <div
+        className="scrolled"
+        style={{
+          display: sidebar ? 'block' : 'none',
+          zIndex: sidebar ? '-460' : '-490',
+          transform: sidebar
+            ? 'transform: translateX(0)'
+            : 'transform: translateX(256px)',
+        }}
+        width=""
+        height=""
+      >
         <img src={iconMenuClose} onClick={closeScroll}></img>
         <div className="mobileNavbar">
           <a href="">Home</a>

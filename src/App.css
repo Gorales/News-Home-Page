@@ -31,25 +31,26 @@ body {
   flex-direction: column;
   position: fixed;
   top: 0;
+  width: 256px;
   right: 0;
   opacity: 1;
-  transition: width 0.3s linear;
-  background-color: #FFFDFA;
+  height: 100%;
+  background-color: #fffdfa;
+  /* transform: translate(256px); */
 }
 
 .toggle {
-  width: 256px;
-  height: 100vh;
+  /* transform: translate(0); */
 }
 
 .scrolled::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: black;
   height: 100vh;
-  width: 119px;
+  width: 100%;
   top: 0;
-  left: -120px;
+  right: 256px;
   opacity: 0.5;
   z-index: -490;
 }
@@ -58,8 +59,8 @@ body {
   position: absolute;
   top: 27.3px;
   right: 27.3px;
-  width:"30.41px";
-  height:"30.41px";
+  width: '30.41px';
+  height: '30.41px';
 }
 
 .mobileNavbar {
@@ -71,7 +72,7 @@ body {
   margin-left: 24px;
   font-size: 18px;
   line-height: 24px;
-  color: #00001A;
+  color: #00001a;
 }
 
 .mobileNavbar a {
@@ -80,13 +81,19 @@ body {
 
 .mobileNavbar a:visited {
   text-decoration: none;
-  color: #00001A;
+  color: #00001a;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  width: calc(100vw - 32px) /* 32px is sum of left and right padding of body */
+  width: calc(100vw - 32px); /* 32px is sum of left and right padding of body */
+  position: sticky;
+  max-width: 1110px;
+  background-color: #ffffffe0;
+  top: 0;
+  padding: 16px;
+  backdrop-filter: blur(12px);
 }
 
 .navbarLinks {
@@ -109,6 +116,7 @@ i {
   align-self: center;
   object-fit: cover;
   width: 100%;
+  max-width: 900px;
 }
 
 .Container .imgDesk {
@@ -122,7 +130,7 @@ i {
 .main-paragraph h1 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  color: #00001A;
+  color: #00001a;
   font-size: 40px;
   font-weight: 800;
   line-height: 40px;
@@ -141,8 +149,8 @@ i {
   font-size: 14px;
   line-height: 24px;
   margin-top: 24px;
-  color: #FFFDFA;
-  background-color: #F15D51;
+  color: #fffdfa;
+  background-color: #f15d51;
   border: none;
   width: 185px;
   height: 48px;
@@ -153,14 +161,14 @@ i {
 }
 
 .news {
-  background-color: #00001A;
-  color: #FFFDFA;
+  background-color: #00001a;
+  color: #fffdfa;
   padding: 24px 20px;
   margin-top: 64px;
 }
 
 .news h1 {
-  color: #E9AA52;
+  color: #e9aa52;
   margin-bottom: 35px;
   font-weight: 700;
   font-size: 32px;
@@ -169,7 +177,7 @@ i {
 
 .news hr {
   margin: 30px 0;
-  border: 1px solid #5E607A;
+  border: 1px solid #5e607a;
 }
 
 .hr-3 {
@@ -184,7 +192,7 @@ i {
 }
 
 .newsCard p {
-  color: #C5C6CE;
+  color: #c5c6ce;
   margin-top: 8px;
   font-weight: 400;
   font-size: 15px;
@@ -205,14 +213,14 @@ footer {
 }
 
 .footerBox-explanation h1 {
-  color: #C5C6CE;
+  color: #c5c6ce;
   font-weight: 700;
   font-size: 32px;
   line-height: 32px;
 }
 .footerBox-explanation h2 {
   margin-top: 12px;
-  color: #00001A;
+  color: #00001a;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -220,21 +228,18 @@ footer {
 
 .footerBox-explanation p {
   margin-top: 9px;
-  color: #5E607A;
+  color: #5e607a;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
 }
 
-
-
-@media screen and (min-width:1440px) {
+@media screen and (min-width: 1440px) {
   body {
     padding: 89px 165px 129px;
   }
 
-  
   header {
     width: 100%;
   }
@@ -243,7 +248,7 @@ footer {
     width: 64.09px;
     height: 39.9px;
   }
-  
+
   .App header i {
     display: none;
   }
@@ -256,14 +261,14 @@ footer {
   .navbarLinks a {
     text-decoration: none;
     margin-left: 40px;
-    color: #5E607A;
+    color: #5e607a;
     font-size: 15px;
     line-height: 26px;
   }
 
   .navbarLinks a:hover {
-    color: #F15D51;
-    cursor: pointer; 
+    color: #f15d51;
+    cursor: pointer;
   }
 
   .middlePart {
@@ -284,9 +289,9 @@ footer {
 
   .Container .imgDesk {
     display: block;
-    width: 730px; 
+    width: 730px;
     height: 300px;
-    object-fit:cover;
+    object-fit: cover;
   }
 
   .news {
@@ -298,8 +303,8 @@ footer {
   }
 
   .news .newsCard h2:hover {
-    color: #F15D51;
-    cursor: pointer; 
+    color: #f15d51;
+    cursor: pointer;
   }
 
   .main-paragraph {
@@ -324,7 +329,7 @@ footer {
   .text-introductory p {
     margin-top: 0;
     line-height: 26px;
-    color: #5E607A;
+    color: #5e607a;
     text-align: left;
   }
 
@@ -346,8 +351,7 @@ footer {
   }
 
   .footerBox h2:hover {
-    color: #F15D51;
-    cursor: pointer; 
+    color: #f15d51;
+    cursor: pointer;
   }
-
-} 
+}
