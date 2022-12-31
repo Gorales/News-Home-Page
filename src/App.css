@@ -107,6 +107,8 @@ i {
 
 .Container .imgMobile {
   align-self: center;
+  object-fit: cover;
+  width: 100%;
 }
 
 .Container .imgDesk {
