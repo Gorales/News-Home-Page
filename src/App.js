@@ -2,13 +2,16 @@ import './App.css';
 import logo from './assets/logo.svg';
 import iconMenu from './assets/icon-menu.svg';
 import imagewebmobile from './assets/image-web-3-mobile.jpg';
+import iconMenuClose from './assets/icon-menu-close.svg';
 import imagewebdesktop from './assets/desktopimage-web-3-desktop.jpg';
 import NewsCard from './NewsBoxes/NewsCard';
 import newsData from './NewsBoxes/NewsData';
 import FooterData from './FooterBoxes/FooterData';
 import FooterCard from './FooterBoxes/FooterCard';
+import { useState } from 'react';
 
 function App() {
+  const [sidebar, setSidebar] = useState(false);
   const NewsCards = newsData.map((item) => {
     return <NewsCard {...item} />;
   });
@@ -17,12 +20,37 @@ function App() {
     return <FooterCard {...item} />;
   });
 
+  function openScroll() {
+    setSidebar(true);
+    document.getElementsByClassName('scrolled').classlist.add('toggle');
+  }
+
+  function closeScroll() {
+    setSidebar(false);
+    document.getElementsByClassName('scrolled').classlist.remove('toggle');
+  }
+
   return (
     <div className="App">
+      <div className="scrolled" width="" height="">
+        <img src={iconMenuClose} onClick={closeScroll}></img>
+        <div className="mobileNavbar">
+          <a href="">Home</a>
+          <a href="">New</a>
+          <a href="">Populer</a>
+          <a href="">Trending</a>
+          <a href="">Categories</a>
+        </div>
+      </div>
       <header>
         <img src={logo} width="45px" height="28px" alt="logo"></img>
         <i>
-          <img src={iconMenu} width="40px" height="17px"></img>
+          <img
+            src={iconMenu}
+            onClick={openScroll}
+            width="40px"
+            height="17px"
+          ></img>
         </i>
         <div className="navbarLinks">
           <a href="">Home</a>
