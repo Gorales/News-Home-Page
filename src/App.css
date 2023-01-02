@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.App {
-  z-index: -500;
 }
 
 body {
@@ -22,7 +18,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 28px 16px 80px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -44,23 +40,23 @@ body {
 }
 
 .scrolled::before {
-  content: '';
+  content: "";
   position: absolute;
   background-color: black;
   height: 100vh;
-  width: 100%;
+  width: calc(100vw - 256px);
   top: 0;
   right: 256px;
   opacity: 0.5;
-  z-index: -490;
+  z-index: 3;
 }
 
 .scrolled img {
   position: absolute;
   top: 27.3px;
   right: 27.3px;
-  width: '30.41px';
-  height: '30.41px';
+  width: "30.41px";
+  height: "30.41px";
 }
 
 .mobileNavbar {
@@ -92,7 +88,7 @@ header {
   max-width: 1110px;
   background-color: #ffffffe0;
   top: 0;
-  padding: 16px;
+  padding: 16px 0;
   backdrop-filter: blur(12px);
 }
 
@@ -128,7 +124,7 @@ i {
 }
 
 .main-paragraph h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   color: #00001a;
   font-size: 40px;
@@ -144,7 +140,7 @@ i {
 }
 
 .main-paragraph button {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
