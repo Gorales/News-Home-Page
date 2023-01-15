@@ -1,14 +1,14 @@
-import './App.css';
-import logo from './assets/logo.svg';
-import iconMenu from './assets/icon-menu.svg';
-import imagewebmobile from './assets/image-web-3-mobile.jpg';
-import iconMenuClose from './assets/icon-menu-close.svg';
-import imagewebdesktop from './assets/desktopimage-web-3-desktop.jpg';
-import NewsCard from './NewsBoxes/NewsCard';
-import newsData from './NewsBoxes/NewsData';
-import FooterData from './FooterBoxes/FooterData';
-import FooterCard from './FooterBoxes/FooterCard';
-import { useState } from 'react';
+import "./App.css";
+import logo from "./assets/logo.svg";
+import iconMenu from "./assets/icon-menu.svg";
+import imagewebmobile from "./assets/image-web-3-mobile.jpg";
+import iconMenuClose from "./assets/icon-menu-close.svg";
+import imagewebdesktop from "./assets/desktopimage-web-3-desktop.jpg";
+import NewsCard from "./NewsBoxes/NewsCard";
+import newsData from "./NewsBoxes/newsData";
+import FooterData from "./FooterBoxes/FooterData";
+import FooterCard from "./FooterBoxes/FooterCard";
+import { useState } from "react";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -35,16 +35,20 @@ function App() {
       <div
         className="scrolled"
         style={{
-          display: sidebar ? 'block' : 'none',
-          zIndex: sidebar ? '-460' : '-490',
+          display: sidebar ? "block" : "none",
+          zIndex: sidebar ? "1" : "0",
           transform: sidebar
-            ? 'transform: translateX(0)'
-            : 'transform: translateX(256px)',
+            ? "transform: translateX(0)"
+            : "transform: translateX(256px)",
         }}
         width=""
         height=""
       >
-        <img src={iconMenuClose} onClick={closeScroll}></img>
+        <img
+          src={iconMenuClose}
+          onClick={closeScroll}
+          style={{ marginTop: "22px", cursor: "pointer" }}
+        ></img>
         <div className="mobileNavbar">
           <a href="">Home</a>
           <a href="">New</a>
@@ -61,6 +65,7 @@ function App() {
             onClick={openScroll}
             width="40px"
             height="17px"
+            style={{ cursor: "pointer" }}
           ></img>
         </i>
         <div className="navbarLinks">
@@ -93,7 +98,7 @@ function App() {
                 the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
               </p>
-              <button>READ MORE</button>
+              <button style={{ cursor: "pointer" }}>READ MORE</button>
             </div>
           </div>
         </div>
